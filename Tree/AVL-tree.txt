@@ -1,0 +1,18 @@
+G: Grandparent
+P: Parent
+N: Node
+
+LL: 
+    即在 Grandparent 节点的左孩子（Parent）的左孩子（Node）添加节点（不管添加在 Node 的左边还是右边）导致的失衡，
+    采用对 Parent 进行右旋来平衡，只需旋转一次
+RR: 
+    即在 Grandparent 节点的右孩子（Parent）的右孩子（Node）添加节点（不管添加在 Node 的左边还是右边）导致的失衡，
+    采用对 Parent 进行左旋来平衡，只需旋转一次
+
+LR: 
+    即在 Grandparent 节点的左孩子（Parent）的右孩子（Node）添加节点导致的失衡，
+    采用先对 Parent 做一次左旋转，得到一个 LL 型的结构，再对旋转值后的 Node 进行右旋
+
+RL: 
+    即在 Grandparent 节点的右孩子的左孩子添加节点导致的失衡
+    采用先对 Parent 做一次右旋转，得到一个 RR 型的结构，再对旋转值后的 Node 进行左旋
