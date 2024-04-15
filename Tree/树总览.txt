@@ -1,15 +1,47 @@
 二叉树
 满二叉树
-完全二叉树
+完全二叉树:
+  二叉树-数组存储:
+    ary[0] = root node
+    则对于任意节点的索引 i，其左子节点的索引为 2i+1，右子节点的索引为 2i+2。
+    则对于任意节点的索引 i，父节点的索引为 i/2 向下取整
+  三叉树-数组存储:
+    ary[0] = root node
+    则对于任意节点的索引 i，其左子节点的索引为 3i+1，中间子节点的索引为 3i+2，右子节点的索引为 3i+3。
+    则对于任意节点的索引 i，父节点的索引为 i/3 向下取整
+  四叉树-数组存储:
+    ditto
 
 哈弗曼树
 
-二叉排序树
+二叉排序树/二叉搜索树(BST: Binary Search Tree)
+  left child node < parent node < right child node
+  left child node > parent node > right child node
 
 平衡二叉树（AVL 树）
 红黑树
 
 
 
-B 树
-B+ 树
+B 树:
+  多叉树
+  node 上可以存储数据
+B+ 树:
+  多叉树
+  node 不存储数据，只存储 index ，只有 叶子 node 才存储数据
+B* 树:
+  多叉树
+  
+
+
+大顶堆/最大堆：
+  二叉树
+  root node > child node
+小顶堆/最小堆:
+  二叉树
+  root node < child node
+斐波那契堆:
+  n 个 小顶堆，所有小顶堆 root node 用 双向链表 串起来，root node 的个数叫做 维度，
+  所有的 child node 也用 双向链表 串起来，叫 子链表，child node 个数 不能超过 维度
+  每个堆的 parent node 有指向 子链表任意 node 的指针，子链表中每个 node 都有指向 parent node 的指针
+  
